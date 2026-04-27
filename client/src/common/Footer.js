@@ -10,6 +10,7 @@ import {
 import { ArrowUpward } from '@mui/icons-material';
 import { motion } from "framer-motion";
 import { useState } from "react";
+import AppSnackbar from "./AppSnackbar";
 
 const Footer = () => {
 
@@ -152,16 +153,13 @@ const Footer = () => {
           © 2024 | נבנה ומנוהל ע״י <strong>דסי קסטנר</strong>
         </Typography>
       </Box>
-      <Snackbar
+      <AppSnackbar
         open={snackbarOpen}
-        autoHideDuration={2000}
-        onClose={() => {setSnackbarOpen(false);}}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-      >
-        <Alert severity="success" sx={{ fontWeight: "bold", fontSize: "1rem" }}>
-          פנייתך נשלחה בהצלחה!
-        </Alert>
-      </Snackbar>
+        onClose={() => {
+          setSnackbarOpen(false);
+        }}
+        message="!נוסף לסל בהצלחה"
+      />
     </Box>
   );
 };

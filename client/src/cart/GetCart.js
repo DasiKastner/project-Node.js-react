@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { useNavigate } from "react-router-dom";
+import AppSnackbar from "../common/AppSnackbar";
 
 const GetCart = () => {
   const [carts, setCarts] = useState([]);
@@ -205,16 +206,14 @@ const GetCart = () => {
           </Button>
         </Stack>
       </Paper>
-      <Snackbar
-              open={snackbarOpen}
-              autoHideDuration={2000}
-              onClose={() => {setSnackbarOpen(false); navigate("/")}}
-              anchorOrigin={{ vertical: "top", horizontal: "center" }}
-              >
-              <Alert severity="success" sx={{ fontWeight: "bold", fontSize: "1rem" }}>
-                  תשלום בוצע בהצלחה!
-              </Alert>
-      </Snackbar>
+      <AppSnackbar
+        open={snackbarOpen}
+        onClose={() => {
+          setSnackbarOpen(false);
+          navigate("/");
+        }}
+        message="תשלום בוצע בהצלחה!"
+      />
     </Box>
     
   );

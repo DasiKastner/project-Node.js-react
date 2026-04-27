@@ -6,11 +6,6 @@ import StarsBurst from "./StarsBurst";
 const AddToCartButton = ({ onAdd }) => {
   const [showStars, setShowStars] = useState(false);
 
-  useEffect(() => {
-    const token = localStorage.getItem("token")
-    if(!token) return;
-  })
-
   const handleClick = async () => {
     const success = await onAdd();
     if (!success) return;
