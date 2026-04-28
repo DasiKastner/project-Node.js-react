@@ -42,7 +42,6 @@
 
 1. התקנה של התלויות:
 
-```bash
 # בתוך תיקיית השרת
 cd server
 npm install
