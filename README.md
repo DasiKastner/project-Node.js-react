@@ -42,21 +42,28 @@
 
 1. התקנה של התלויות:
 
+### בתוך תיקיית השרת
 ```bash
-# בתוך תיקיית השרת
 cd server
 npm install
+```
 
-# בתוך תיקיית הלקוח
+### בתוך תיקיית הלקוח
+```bash
 cd ../client
 npm install
-# הפעלת השרת
+```
+### הפעלת השרת
+```bash
 cd server
 npm start
+```
 
-# הפעלת הלקוח
+### הפעלת הלקוח
+```bash
 cd ../client
 npm start
+```
 
 ## Screenshots / Demo
 
